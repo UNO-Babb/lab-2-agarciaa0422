@@ -16,21 +16,29 @@ def main():
 
   #TODO:
   #Ask user for hours
+  hours = input("Enter hours: ")
+  hours = int(hours) 
+
+  
   #Ask user for minutes
+  mins = input("Enter mins: ")
+  mins = int(mins)
+
   moreMins = 500
 
   futureMins = (currentMinute + moreMins) % 60
   extraHour = (currentMinute + moreMins) // 60
-  
+  futureHours = (currentHour + hours + extraHour) % 24
   print(extraHour)
 
   print(futureMins)
   #Calculate the time after the user-supplied time has passed.
-
+  strHour = str(futureHours)
+  strMin = str(futureMins)
   #Do not use any if statements in calculating the time.
 
   #Output the future time in standard format "HH:MM"
-
+  print(strHour + ":"+ strMin)
 
 if __name__ == '__main__':
   main()
